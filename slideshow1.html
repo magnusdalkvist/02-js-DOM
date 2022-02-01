@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Tro på det...</h1>
+  <img src="https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img1.png?raw=true" alt="billede" />
+  <p>Billeder brugt med tilladelse af Rasmus Breghøi</p>
+  <button>Videre</button>
+  <script>
+    const img1 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img1.png?raw=true";
+    const img2 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img2.png?raw=true";
+    const img3 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img3.png?raw=true";
+    const img4 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img4.png?raw=true";
+    const img5 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img5.png?raw=true";
+    const img6 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img6.png?raw=true";
+    const img7 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img7.png?raw=true";
+    const img8 =
+      "https://github.com/martinbregnhoi/Tema7E20/blob/master/billeder/img8.png?raw=true";
+
+    const gallery = [img1, img2, img3, img4, img5, img6, img7, img8];
+    let i = 0;
+    const slideshow = document.querySelector("img");
+
+    document.querySelector("button").addEventListener("click", skift);
+    function skift() {
+      i++
+      slideshow.src = gallery[i % 8];
+    }
+  </script>
+</body>
+
+</html>
