@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+        header, footer {
+            border: 1px black solid;
+            text-align: center;
+        }
+        main{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+            gap: 1em;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+    <header>
+        <h1>Titel</h1>
+    </header>
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="https://placeimg.com/400/300/any" alt="Article 2 img">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius esse quam quasi, beatae soluta tenetur consequatur atque, labore quos saepe rerum veritatis aliquid cum alias necessitatibus vel ducimus quidem accusantium!</p>
+            </article>
+            <article>
+                <img src="https://placeimg.com/640/480/any?t=1643706192539" alt="Article 2 img">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius esse quam quasi, beatae soluta tenetur consequatur atque, labore quos saepe rerum veritatis aliquid cum alias necessitatibus vel ducimus quidem accusantium!</p>
+            </artsicle>
+        </section>  
+    </main>
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+    <script>
+        const header = document.querySelector("header");
+        const main = document.querySelector("main");
+        const section = document.querySelector("section");
+        const article1 = document.querySelector("article:first-child");
+        const article1Title = article1.querySelector("h3");
+        const article1Text = article1.querySelector("p");
+        const article2 = document.querySelector("article:nth-child(2)");
+        const article2Title = article2.querySelector("h3");
+        const article2Text = article2.querySelector("p");
+        const footer = document.querySelector("footer")
+
+        console.log(header, main, section, article1, article2, footer);
+
+        header.innerHTML = "<h1>Ny Titel</h1>";
+        article1Title.textContent = "Article 1 (javascript)";
+        article1Text.textContent = "This text has been changed with textContent"
+        article2Title.innerHTML = "<h3>Article 2 (javascript)</h3>"
+        article2Text.innerHTML = "<h3><b>This text has been changed with innerHTML</b></h3>"
+    </script>
+</body>
+</html>
